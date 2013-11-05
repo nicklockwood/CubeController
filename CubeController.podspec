@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
   s.name         = "CubeController"
   s.version      = "1.0"
-  s.summary      = "A view controller container class for creating a 3D rotating cube of view controllers"
+  s.summary      = "A view controller container class for creating a 3D rotating cube of view controllers."
   s.homepage     = "https://github.com/nicklockwood/CubeController"
   s.license      = { :type => 'zlib', :file => 'LICENCE.md' }
   s.author       = { "Nick Lockwood" => "support@charcoaldesign.co.uk" }
