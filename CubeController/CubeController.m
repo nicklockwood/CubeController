@@ -1,7 +1,7 @@
 //
 //  CubeController.m
 //
-//  Version 1.0
+//  Version 1.0.1
 //
 //  Created by Nick Lockwood on 30/06/2013.
 //  Copyright (c) 2013 Charcoal Design
@@ -82,6 +82,7 @@
         [self addChildViewController:controller];
         controller.view.frame = self.view.bounds;
         controller.view.layer.doubleSided = NO;
+        controller.view.userInteractionEnabled = (i == _currentViewControllerIndex);
         [_scrollView insertSubview:controller.view atIndex:0];
     }
 }
@@ -113,8 +114,14 @@
     _currentViewControllerIndex = MAX(0, MIN(_numberOfViewControllers - 1, floorf(offset)));
     if (_currentViewControllerIndex != _previousViewControllerIndex)
     {
-        [_controllers[_previousViewControllerIndex] viewWillDisappear:YES];
-        [_controllers[_currentViewControllerIndex] viewWillAppear:YES];
+        UIViewController *previousController = _controllers[_previousViewControllerIndex];
+        [previousController viewWillDisappear:YES];
+        previousController.view.userInteractionEnabled = NO;
+        
+        UIViewController *currentViewController = _controllers[_currentViewControllerIndex];
+        [currentViewController viewWillDisappear:YES];
+        currentViewController.view.userInteractionEnabled = YES;
+        
         indexChanged = YES;
     }
 
