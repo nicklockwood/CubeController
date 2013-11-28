@@ -14,9 +14,6 @@
 		01B27AD718285C6400D38000 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 01B27AD618285C6400D38000 /* main.m */; };
 		01B27ADB18285C6400D38000 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 01B27ADA18285C6400D38000 /* AppDelegate.m */; };
 		01B27ADD18285C6400D38000 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 01B27ADC18285C6400D38000 /* Images.xcassets */; };
-		01B27AE418285C6400D38000 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01B27AE318285C6400D38000 /* XCTest.framework */; };
-		01B27AE518285C6400D38000 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01B27ACA18285C6400D38000 /* Foundation.framework */; };
-		01B27AE618285C6400D38000 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01B27ACE18285C6400D38000 /* UIKit.framework */; };
 		01B27B02182863E800D38000 /* RedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 01B27B00182863E800D38000 /* RedViewController.m */; };
 		01B27B03182863E800D38000 /* RedViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 01B27B01182863E800D38000 /* RedViewController.xib */; };
 		01B27B071828641D00D38000 /* GreenViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 01B27B051828641D00D38000 /* GreenViewController.m */; };
@@ -25,16 +22,6 @@
 		01B27B0D1828642C00D38000 /* BlueViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 01B27B0B1828642C00D38000 /* BlueViewController.xib */; };
 		01E2054E1828625100CF9BF7 /* CubeController.m in Sources */ = {isa = PBXBuildFile; fileRef = 01E2054D1828625100CF9BF7 /* CubeController.m */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		01B27AE718285C6400D38000 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 01B27ABF18285C6400D38000 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 01B27AC618285C6400D38000;
-			remoteInfo = CubeControllerExample;
-		};
-/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		01B27AC718285C6400D38000 /* CubeControllerExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CubeControllerExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -48,7 +35,6 @@
 		01B27AD918285C6400D38000 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		01B27ADA18285C6400D38000 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		01B27ADC18285C6400D38000 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		01B27AE218285C6400D38000 /* CubeControllerExampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CubeControllerExampleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		01B27AE318285C6400D38000 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		01B27AFF182863E800D38000 /* RedViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RedViewController.h; sourceTree = "<group>"; };
 		01B27B00182863E800D38000 /* RedViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RedViewController.m; sourceTree = "<group>"; };
@@ -74,16 +60,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		01B27ADF18285C6400D38000 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				01B27AE418285C6400D38000 /* XCTest.framework in Frameworks */,
-				01B27AE618285C6400D38000 /* UIKit.framework in Frameworks */,
-				01B27AE518285C6400D38000 /* Foundation.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -101,7 +77,6 @@
 			isa = PBXGroup;
 			children = (
 				01B27AC718285C6400D38000 /* CubeControllerExample.app */,
-				01B27AE218285C6400D38000 /* CubeControllerExampleTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -178,24 +153,6 @@
 			productReference = 01B27AC718285C6400D38000 /* CubeControllerExample.app */;
 			productType = "com.apple.product-type.application";
 		};
-		01B27AE118285C6400D38000 /* CubeControllerExampleTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 01B27AF618285C6400D38000 /* Build configuration list for PBXNativeTarget "CubeControllerExampleTests" */;
-			buildPhases = (
-				01B27ADE18285C6400D38000 /* Sources */,
-				01B27ADF18285C6400D38000 /* Frameworks */,
-				01B27AE018285C6400D38000 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				01B27AE818285C6400D38000 /* PBXTargetDependency */,
-			);
-			name = CubeControllerExampleTests;
-			productName = CubeControllerExampleTests;
-			productReference = 01B27AE218285C6400D38000 /* CubeControllerExampleTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -204,11 +161,6 @@
 			attributes = {
 				LastUpgradeCheck = 0500;
 				ORGANIZATIONNAME = "Charcoal Design";
-				TargetAttributes = {
-					01B27AE118285C6400D38000 = {
-						TestTargetID = 01B27AC618285C6400D38000;
-					};
-				};
 			};
 			buildConfigurationList = 01B27AC218285C6400D38000 /* Build configuration list for PBXProject "CubeControllerExample" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -223,7 +175,6 @@
 			projectRoot = "";
 			targets = (
 				01B27AC618285C6400D38000 /* CubeControllerExample */,
-				01B27AE118285C6400D38000 /* CubeControllerExampleTests */,
 			);
 		};
 /* End PBXProject section */
@@ -238,13 +189,6 @@
 				01B27B03182863E800D38000 /* RedViewController.xib in Resources */,
 				01B27AD518285C6400D38000 /* InfoPlist.strings in Resources */,
 				01B27ADD18285C6400D38000 /* Images.xcassets in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		01B27AE018285C6400D38000 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -264,22 +208,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		01B27ADE18285C6400D38000 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		01B27AE818285C6400D38000 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 01B27AC618285C6400D38000 /* CubeControllerExample */;
-			targetProxy = 01B27AE718285C6400D38000 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		01B27AD318285C6400D38000 /* InfoPlist.strings */ = {
@@ -370,6 +299,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_MODULES_AUTOLINK = YES;
 				CLANG_STATIC_ANALYZER_MODE = deep;
 				CLANG_WARN_CXX0X_EXTENSIONS = YES;
 				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
@@ -404,11 +334,13 @@
 				GCC_WARN_UNUSED_LABEL = YES;
 				GCC_WARN_UNUSED_PARAMETER = YES;
 				INFOPLIST_FILE = "CubeControllerExample/CubeControllerExample-Info.plist";
+				LINK_WITH_STANDARD_LIBRARIES = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				RUN_CLANG_STATIC_ANALYZER = YES;
 				WARNING_CFLAGS = (
 					"-Weverything",
 					"-Wno-objc-missing-property-synthesis",
+					"-Wno-auto-import",
 				);
 				WRAPPER_EXTENSION = app;
 			};
@@ -419,6 +351,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_MODULES_AUTOLINK = YES;
 				CLANG_STATIC_ANALYZER_MODE = deep;
 				CLANG_WARN_CXX0X_EXTENSIONS = YES;
 				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
@@ -453,55 +386,15 @@
 				GCC_WARN_UNUSED_LABEL = YES;
 				GCC_WARN_UNUSED_PARAMETER = YES;
 				INFOPLIST_FILE = "CubeControllerExample/CubeControllerExample-Info.plist";
+				LINK_WITH_STANDARD_LIBRARIES = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				RUN_CLANG_STATIC_ANALYZER = YES;
 				WARNING_CFLAGS = (
 					"-Weverything",
 					"-Wno-objc-missing-property-synthesis",
+					"-Wno-auto-import",
 				);
 				WRAPPER_EXTENSION = app;
-			};
-			name = Release;
-		};
-		01B27AF718285C6400D38000 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/CubeControllerExample.app/CubeControllerExample";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-					"$(DEVELOPER_FRAMEWORKS_DIR)",
-				);
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "CubeControllerExample/CubeControllerExample-Prefix.pch";
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = "CubeControllerExampleTests/CubeControllerExampleTests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUNDLE_LOADER)";
-				WRAPPER_EXTENSION = xctest;
-			};
-			name = Debug;
-		};
-		01B27AF818285C6400D38000 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/CubeControllerExample.app/CubeControllerExample";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-					"$(DEVELOPER_FRAMEWORKS_DIR)",
-				);
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "CubeControllerExample/CubeControllerExample-Prefix.pch";
-				INFOPLIST_FILE = "CubeControllerExampleTests/CubeControllerExampleTests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUNDLE_LOADER)";
-				WRAPPER_EXTENSION = xctest;
 			};
 			name = Release;
 		};
@@ -522,15 +415,6 @@
 			buildConfigurations = (
 				01B27AF418285C6400D38000 /* Debug */,
 				01B27AF518285C6400D38000 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		01B27AF618285C6400D38000 /* Build configuration list for PBXNativeTarget "CubeControllerExampleTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				01B27AF718285C6400D38000 /* Debug */,
-				01B27AF818285C6400D38000 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

@@ -6,7 +6,7 @@
 //  Copyright (c) 2013 Charcoal Design. All rights reserved.
 //
 
-@import UIKit;
+#import <UIKit/UIKit.h>
 
 @interface BlueViewController : UIViewController
 

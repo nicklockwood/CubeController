@@ -31,7 +31,7 @@ CubeController is derived from UIViewController and - as with all UIKit componen
 Installation
 --------------
 
-To use the CubeController class in an app, just drag the CubeController class files (demo files and assets are not needed) into your project.
+To use the CubeController class in an app, just drag the CubeController class files (demo files and assets are not needed) into your project and add the QuartzCore framework (or enable Link Frameworks Automatically in the Build Settings).
 
 
 Properties

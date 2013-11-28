@@ -31,11 +31,12 @@
 //
 
 
-@import UIKit;
-
-
 #pragma GCC diagnostic push
+#pragma GCC diagnostic ignored "-Wauto-import"
 #pragma GCC diagnostic ignored "-Wobjc-missing-property-synthesis"
+
+
+#import <UIKit/UIKit.h>
 
 
 #undef weak_delegate

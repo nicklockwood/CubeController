@@ -6,7 +6,6 @@
 //  Copyright (c) 2013 Charcoal Design. All rights reserved.
 //
 
-@import UIKit;
 #import "AppDelegate.h"
 
 int main(int argc, char * argv[])
