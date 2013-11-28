@@ -55,11 +55,23 @@ The number of view controllers displayed in the CubeController (read only). To s
     
 The index of the currently frontmost view controller. Setting this value is equivalent to calling `scrollToViewControllerAtIndex:animated:` with the animated argument set to NO.
 
+    @property (nonatomic, assign) NSRange preloadedControllerRange;
+    
+This property is used to set a range of controllers to preload and keep loaded. Normally CubeController loads controllers as needed, an unloads them when they move offscreen. This property allows you to keep a collection of controllers loaded, which can be useful for performance reasons.
+    
+    @property (nonatomic, getter = isWrapEnabled) BOOL wrapEnabled;
+    
+This property enables wrapping. If set to YES, the SubeController can be rotated right around in a circle. If set to NO, the controller will stop when scrolled to the first or last index.
+
 
 Methods
 --------------
 
 The CubeController class has the following methods:
+
+    - (void)reloadData;
+    
+This method reloads all the view controllers in the CubeController.
 
     - (void)scrollToViewControllerAtIndex:(NSInteger)index animated:(BOOL)animated;
     

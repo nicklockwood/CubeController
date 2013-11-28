@@ -36,8 +36,10 @@
 
 
 #pragma GCC diagnostic ignored "-Wreceiver-is-weak"
+#pragma GCC diagnostic ignored "-Warc-repeated-use-of-weak"
 #pragma GCC diagnostic ignored "-Wobjc-missing-property-synthesis"
 #pragma GCC diagnostic ignored "-Wdirect-ivar-access"
+#pragma GCC diagnostic ignored "-Wconversion"
 #pragma GCC diagnostic ignored "-Wgnu"
 
 
@@ -143,7 +145,7 @@
     [self updateLayout];
 }
 
-- (UIViewController *)controllerAtIndex:(NSUInteger)index
+- (UIViewController *)controllerAtIndex:(NSInteger)index
 {
     UIViewController *controller = _controllers[@(index)];
     if (!controller && _numberOfViewControllers)
@@ -154,6 +156,7 @@
     if (controller && !controller.parentViewController)
     {
         controller.view.frame = self.view.bounds;
+        controller.view.autoresizingMask = UIViewAutoresizingNone;
         controller.view.layer.doubleSided = NO;
         [_scrollView addSubview:controller.view];
         [self addChildViewController:controller];
@@ -165,7 +168,7 @@
 {
     if (_scrollView)
     {
-        NSUInteger pages = (_wrapEnabled && _numberOfViewControllers > 1)? 3: MIN(3, _numberOfViewControllers);
+        NSInteger pages = (_wrapEnabled && _numberOfViewControllers > 1)? 3: MIN(3, _numberOfViewControllers);
         _scrollView.contentSize = CGSizeMake(self.view.bounds.size.width * pages, self.view.bounds.size.height);
         [self updateContentOffset];
         [self scrollViewDidScroll:_scrollView];
@@ -206,17 +209,17 @@
         _scrollOffset += (offset - _previousOffset);
         if (_wrapEnabled)
         {
-            while (_scrollOffset < 0.0f) _scrollOffset += _numberOfViewControllers - 1.0f;
-            while (_scrollOffset >= _numberOfViewControllers - 1.0f) _scrollOffset -= (_numberOfViewControllers - 1.0f);
+            while (_scrollOffset < 0.0f) _scrollOffset += _numberOfViewControllers;
+            while (_scrollOffset >= _numberOfViewControllers) _scrollOffset -= _numberOfViewControllers;
         }
         _previousOffset = offset;
         
         //prevent error accumulation
-        if (offset - floorf(offset) == 0.0f) _scrollOffset = roundf(_scrollOffset);
-
+        if (offset - floor(offset) == 0.0f) _scrollOffset = round(_scrollOffset);
+        
         //update index
         NSInteger previousViewControllerIndex = _currentViewControllerIndex;
-        _currentViewControllerIndex = MAX(0, MIN(_numberOfViewControllers - 1, _scrollOffset));
+        _currentViewControllerIndex = MAX(0, MIN(_numberOfViewControllers - 1, (NSInteger)_scrollOffset));
         BOOL indexChanged = (_currentViewControllerIndex != previousViewControllerIndex);
         
         //update content offset
@@ -272,6 +275,8 @@
             }
             
             UIViewController *controller = [self controllerAtIndex:i];
+            controller.view.userInteractionEnabled = (i == _currentViewControllerIndex);
+            controller.view.hidden = ABS(i - _currentViewControllerIndex) > 1;
             controller.view.center = CGPointMake(self.view.bounds.size.width / 2.0f + scrollView.contentOffset.x, self.view.bounds.size.height / 2.0f);
             controller.view.layer.transform = transform;
         }

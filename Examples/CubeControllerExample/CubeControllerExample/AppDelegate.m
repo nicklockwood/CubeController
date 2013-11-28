@@ -25,7 +25,7 @@
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     CubeController *controller = [[CubeController alloc] init];
     controller.dataSource = self;
-    controller.wrapEnabled = NO;
+    controller.wrapEnabled = YES;
     self.window.rootViewController = controller;
     [self.window makeKeyAndVisible];
 
@@ -39,7 +39,7 @@
 
 - (UIViewController *)cubeController:(__unused CubeController *)cubeController viewControllerAtIndex:(NSInteger)index
 {
-    switch (index % 3)
+    switch (index)
     {
         case 0:
             return [[RedViewController alloc] init];
