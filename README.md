@@ -61,7 +61,7 @@ The index of the currently frontmost view controller. Setting this value is equi
 
     @property (nonatomic, getter = isWrapEnabled) BOOL wrapEnabled;
     
-This property enables wrapping. If set to YES, the SubeController can be rotated right around in a circle. If set to NO, the controller will stop when scrolled to the first or last index.
+This property enables wrapping. If set to YES, the CubeController can be rotated right around in a circle. If set to NO, the controller will stop when scrolled to the first or last index.
 
 
 Methods
