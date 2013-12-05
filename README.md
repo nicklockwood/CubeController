@@ -47,6 +47,10 @@ An object that supports the CubeControllerDataSource protocol and can provide vi
 
 An object that supports the CubeControllerDelegate protocol and can respond to CubeController events.
 
+    @property (nonatomic, readonly) UIScrollView *scrollView;
+    
+This is the UIScrollView used internally by CubeController. This is exposed so that you can easily configure properties such as bounce, acceleration, etc. Note that overriding certain scrollVIew properties will cause the CubeController to behave incorrectly.
+
     @property (nonatomic, readonly) NSInteger numberOfViewControllers;
 
 The number of view controllers displayed in the CubeController (read only). To set this, implement the `numberOfViewControllersInCubeController:` dataSource method. Note that typically only one or at most two of these view controllers will be visible at a given point in time.
@@ -55,10 +59,6 @@ The number of view controllers displayed in the CubeController (read only). To s
     
 The index of the currently frontmost view controller. Setting this value is equivalent to calling `scrollToViewControllerAtIndex:animated:` with the animated argument set to NO.
 
-    @property (nonatomic, assign) NSRange preloadedControllerRange;
-    
-This property is used to set a range of controllers to preload and keep loaded. Normally CubeController loads controllers as needed, an unloads them when they move offscreen. This property allows you to keep a collection of controllers loaded, which can be useful for performance reasons.
-    
     @property (nonatomic, getter = isWrapEnabled) BOOL wrapEnabled;
     
 This property enables wrapping. If set to YES, the SubeController can be rotated right around in a circle. If set to NO, the controller will stop when scrolled to the first or last index.
@@ -71,11 +71,30 @@ The CubeController class has the following methods:
 
     - (void)reloadData;
     
-This method reloads all the view controllers in the CubeController.
+This method reloads all the visible view controllers in the CubeController.
+
+    - (void)reloadViewControllerAtIndex:(NSInteger)index animated:(BOOL)animated;
+
+This method reloads the specified controller. An optional crossfade animation can be applied. If the specified view controller is not currently loaded (offscreen) then the method does nothing.
 
     - (void)scrollToViewControllerAtIndex:(NSInteger)index animated:(BOOL)animated;
     
-This will rotate the CubeController to the specified view controller index, either immediately or with a smooth animation.
+This will rotate the CubeController to the specified view controller index, either immediately or with a smooth animation. The specified index is bounds-checked and wrapped if appropriate, so it is safe to pass a value outside of the range 0 - numberOfViewControllers.
+
+    - (void)scrollForwardAnimated:(BOOL)animated;
+    - (void)scrollBackAnimated:(BOOL)animated;
+    
+These methods rotate the CubeController forward or back by one step (90 degrees), .
+
+
+UIViewController Extensions
+-------------------------------
+
+CubeController extends UIViewController with the following property:
+
+    @property (nonatomic, readonly) CubeController *cubeController;
+
+This property can be used as a convenient way to access the parent CubeController of any view controller. This is simialr to the navigationController or tabBarController properties of UIViewController. If the controller is not currently inside a CubeController, the property will be nil.
 
 
 Protocols

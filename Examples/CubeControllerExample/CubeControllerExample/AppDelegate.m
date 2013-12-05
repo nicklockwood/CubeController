@@ -8,9 +8,7 @@
 
 #import "AppDelegate.h"
 #import "CubeController.h"
-#import "RedViewController.h"
-#import "GreenViewController.h"
-#import "BlueViewController.h"
+#import "ViewController.h"
 
 
 @interface AppDelegate () <CubeControllerDataSource>
@@ -39,14 +37,20 @@
 
 - (UIViewController *)cubeController:(__unused CubeController *)cubeController viewControllerAtIndex:(NSInteger)index
 {
-    switch (index)
+    switch (index % 3)
     {
         case 0:
-            return [[RedViewController alloc] init];
+        {
+            return [[ViewController alloc] initWithNibName:@"RedViewController" bundle:nil];
+        }
         case 1:
-            return [[GreenViewController alloc] init];
+        {
+            return [[ViewController alloc] initWithNibName:@"GreenViewController" bundle:nil];
+        }
         case 2:
-            return [[BlueViewController alloc] init];
+        {
+            return [[ViewController alloc] initWithNibName:@"BlueViewController" bundle:nil];
+        }
     }
     return nil;
 }

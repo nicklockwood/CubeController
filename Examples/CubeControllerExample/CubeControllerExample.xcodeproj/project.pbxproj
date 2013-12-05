@@ -14,11 +14,9 @@
 		01B27AD718285C6400D38000 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 01B27AD618285C6400D38000 /* main.m */; };
 		01B27ADB18285C6400D38000 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 01B27ADA18285C6400D38000 /* AppDelegate.m */; };
 		01B27ADD18285C6400D38000 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 01B27ADC18285C6400D38000 /* Images.xcassets */; };
-		01B27B02182863E800D38000 /* RedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 01B27B00182863E800D38000 /* RedViewController.m */; };
+		01B27B02182863E800D38000 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 01B27B00182863E800D38000 /* ViewController.m */; };
 		01B27B03182863E800D38000 /* RedViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 01B27B01182863E800D38000 /* RedViewController.xib */; };
-		01B27B071828641D00D38000 /* GreenViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 01B27B051828641D00D38000 /* GreenViewController.m */; };
 		01B27B081828641D00D38000 /* GreenViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 01B27B061828641D00D38000 /* GreenViewController.xib */; };
-		01B27B0C1828642C00D38000 /* BlueViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 01B27B0A1828642C00D38000 /* BlueViewController.m */; };
 		01B27B0D1828642C00D38000 /* BlueViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 01B27B0B1828642C00D38000 /* BlueViewController.xib */; };
 		01E2054E1828625100CF9BF7 /* CubeController.m in Sources */ = {isa = PBXBuildFile; fileRef = 01E2054D1828625100CF9BF7 /* CubeController.m */; };
 /* End PBXBuildFile section */
@@ -36,14 +34,10 @@
 		01B27ADA18285C6400D38000 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		01B27ADC18285C6400D38000 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		01B27AE318285C6400D38000 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
-		01B27AFF182863E800D38000 /* RedViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RedViewController.h; sourceTree = "<group>"; };
-		01B27B00182863E800D38000 /* RedViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RedViewController.m; sourceTree = "<group>"; };
+		01B27AFF182863E800D38000 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		01B27B00182863E800D38000 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		01B27B01182863E800D38000 /* RedViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RedViewController.xib; sourceTree = "<group>"; };
-		01B27B041828641D00D38000 /* GreenViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GreenViewController.h; sourceTree = "<group>"; };
-		01B27B051828641D00D38000 /* GreenViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GreenViewController.m; sourceTree = "<group>"; };
 		01B27B061828641D00D38000 /* GreenViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GreenViewController.xib; sourceTree = "<group>"; };
-		01B27B091828642C00D38000 /* BlueViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BlueViewController.h; sourceTree = "<group>"; };
-		01B27B0A1828642C00D38000 /* BlueViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BlueViewController.m; sourceTree = "<group>"; };
 		01B27B0B1828642C00D38000 /* BlueViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BlueViewController.xib; sourceTree = "<group>"; };
 		01E2054C1828625100CF9BF7 /* CubeController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CubeController.h; sourceTree = "<group>"; };
 		01E2054D1828625100CF9BF7 /* CubeController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CubeController.m; sourceTree = "<group>"; };
@@ -97,14 +91,10 @@
 			children = (
 				01B27AD918285C6400D38000 /* AppDelegate.h */,
 				01B27ADA18285C6400D38000 /* AppDelegate.m */,
-				01B27AFF182863E800D38000 /* RedViewController.h */,
-				01B27B00182863E800D38000 /* RedViewController.m */,
+				01B27AFF182863E800D38000 /* ViewController.h */,
+				01B27B00182863E800D38000 /* ViewController.m */,
 				01B27B01182863E800D38000 /* RedViewController.xib */,
-				01B27B041828641D00D38000 /* GreenViewController.h */,
-				01B27B051828641D00D38000 /* GreenViewController.m */,
 				01B27B061828641D00D38000 /* GreenViewController.xib */,
-				01B27B091828642C00D38000 /* BlueViewController.h */,
-				01B27B0A1828642C00D38000 /* BlueViewController.m */,
 				01B27B0B1828642C00D38000 /* BlueViewController.xib */,
 				01B27ADC18285C6400D38000 /* Images.xcassets */,
 				01B27AD118285C6400D38000 /* Supporting Files */,
@@ -199,10 +189,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				01B27B02182863E800D38000 /* RedViewController.m in Sources */,
+				01B27B02182863E800D38000 /* ViewController.m in Sources */,
 				01B27ADB18285C6400D38000 /* AppDelegate.m in Sources */,
-				01B27B0C1828642C00D38000 /* BlueViewController.m in Sources */,
-				01B27B071828641D00D38000 /* GreenViewController.m in Sources */,
 				01B27AD718285C6400D38000 /* main.m in Sources */,
 				01E2054E1828625100CF9BF7 /* CubeController.m in Sources */,
 			);

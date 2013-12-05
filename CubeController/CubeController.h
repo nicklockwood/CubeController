@@ -1,7 +1,7 @@
 //
 //  CubeController.h
 //
-//  Version 1.1
+//  Version 1.2
 //
 //  Created by Nick Lockwood on 30/06/2013.
 //  Copyright (c) 2013 Charcoal Design
@@ -52,15 +52,19 @@
 
 @interface CubeController : UIViewController
 
-@property (nonatomic, weak_delegate) id<CubeControllerDataSource> dataSource;
-@property (nonatomic, weak_delegate) id<CubeControllerDelegate> delegate;
+@property (nonatomic, weak_delegate) IBOutlet id<CubeControllerDataSource> dataSource;
+@property (nonatomic, weak_delegate) IBOutlet id<CubeControllerDelegate> delegate;
+@property (nonatomic, readonly) UIScrollView *scrollView;
 @property (nonatomic, readonly) NSInteger numberOfViewControllers;
 @property (nonatomic, assign) NSInteger currentViewControllerIndex;
-@property (nonatomic, assign) NSRange preloadedControllerRange;
 @property (nonatomic, getter = isWrapEnabled) BOOL wrapEnabled;
 
 - (void)reloadData;
+- (void)reloadViewControllerAtIndex:(NSInteger)index animated:(BOOL)animated;
+
 - (void)scrollToViewControllerAtIndex:(NSInteger)index animated:(BOOL)animated;
+- (void)scrollForwardAnimated:(BOOL)animated;
+- (void)scrollBackAnimated:(BOOL)animated;
 
 @end
 
@@ -84,6 +88,13 @@
 - (void)cubeControllerWillBeginDecelerating:(CubeController *)cubeController;
 - (void)cubeControllerDidEndDecelerating:(CubeController *)cubeController;
 - (void)cubeControllerDidEndScrollingAnimation:(CubeController *)cubeController;
+
+@end
+
+
+@interface UIViewController (CubeController)
+
+@property (nonatomic, readonly) CubeController *cubeController;
 
 @end
 
