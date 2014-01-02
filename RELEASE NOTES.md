@@ -1,3 +1,7 @@
+Version 1.2.1
+
+- The scrollOffset of UIScrollViews and UITableViews in the CubeController no longer gets reset when they are rotated.
+
 Version 1.2
 
 - Improved scrollToViewControllerAtIndex:animated: method behaviour

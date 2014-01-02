@@ -1,7 +1,7 @@
 //
 //  CubeController.h
 //
-//  Version 1.2
+//  Version 1.2.1
 //
 //  Created by Nick Lockwood on 30/06/2013.
 //  Copyright (c) 2013 Charcoal Design

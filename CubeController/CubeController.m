@@ -1,7 +1,7 @@
 //
 //  CubeController.m
 //
-//  Version 1.2
+//  Version 1.2.1
 //
 //  Created by Nick Lockwood on 30/06/2013.
 //  Copyright (c) 2013 Charcoal Design
@@ -226,9 +226,19 @@
             transform = CATransform3DTranslate(transform, 0, 0, self.view.bounds.size.width / 2.0f);
         }
         
+        CGPoint contentOffset = CGPointZero;
+        BOOL isScrollView = [controller.view isKindOfClass:[UIScrollView class]];
+        if (isScrollView)
+        {
+            contentOffset = ((UIScrollView *)controller.view).contentOffset;
+        }
         controller.view.bounds = self.view.bounds;
         controller.view.center = CGPointMake(self.view.bounds.size.width / 2.0f + _scrollView.contentOffset.x, self.view.bounds.size.height / 2.0f);
         controller.view.layer.transform = transform;
+        if (isScrollView)
+        {
+            ((UIScrollView *)controller.view).contentOffset = contentOffset;
+        }
     }
 }
 

@@ -49,7 +49,7 @@ An object that supports the CubeControllerDelegate protocol and can respond to C
 
     @property (nonatomic, readonly) UIScrollView *scrollView;
     
-This is the UIScrollView used internally by CubeController. This is exposed so that you can easily configure properties such as bounce, acceleration, etc. Note that overriding certain scrollVIew properties will cause the CubeController to behave incorrectly.
+This is the UIScrollView used internally by CubeController. This is exposed so that you can easily configure properties such as bounce, acceleration, etc. Note that overriding certain scrollView properties will cause the CubeController to behave incorrectly.
 
     @property (nonatomic, readonly) NSInteger numberOfViewControllers;
 
